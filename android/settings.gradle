@@ -1,0 +1,3 @@
+rootProject.name = 'scofield'
+
+include ':app'
