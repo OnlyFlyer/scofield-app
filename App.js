@@ -13,6 +13,10 @@ import {
   Text,
   View
 } from 'react-native'
+import { Provider } from 'react-redux'
+import { ActionTypes } from '@config'
+
+import SplashScreen from './src/view/splash_screen'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -21,9 +25,36 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {}
-export default class App extends Component<Props> {
+// type Props = {}
+export default class App extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      initComplete: false
+    }
+  }
+
+  componentDidMount () {
+    // this.setState({
+    //   initComplete: true
+    // })
+  }
+
+  _initComplete = () => {
+    this.setState({
+      initComplete: true
+    })
+  }
   render() {
+    const { initComplete = false } = this.state
+    if (!initComplete) {
+      return (
+        <SplashScreen
+          showBtn
+          initEnd={this._initComplete}
+        />
+      )
+    }
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to React Native!</Text>

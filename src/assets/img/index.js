@@ -6,5 +6,6 @@
  */
 
 export default {
-  IMG_REST: require('./asset/img_rest.png')
+  IMG_REST: require('./asset/img_rest.png'),
+  IMG_LAUNCH: require('./asset/img_launch.jpg')
 }
