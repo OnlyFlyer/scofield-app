@@ -5,6 +5,9 @@
  * @Last Modified time: 2018-11-05 11:04:27
  */
 
-// config files
+import ActionTypes from './action_types'
 
-export {}
+// export config files
+export {
+  ActionTypes
+}
