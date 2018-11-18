@@ -1,3 +1,13 @@
 {
-  "presets": ["module:metro-react-native-babel-preset"]
+  "presets": ["module:metro-react-native-babel-preset"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+          "@scofAssets": "./src/assets",
+          "@components": "./src/components",
+          "@config": "./src/config"
+      }
+    }]
+  ]
 }
