@@ -2,7 +2,7 @@
 
 This is my first app !
 
-## Export Modules
+# Export Modules
 
 BY `babel-plugin-module-resolver`
 
@@ -24,7 +24,27 @@ BY `babel-plugin-module-resolver`
   ]
 }
 
-// 不要在外面包一层 babel, 这样会报错, 直接些 plugins 这一层即可
+// 不要在外面包一层 babel, 这样会报错, 直接写 plugins 这一层即可
 
 
 ```
+
+# Contributing
+
+The main purpose of this repository is to continue to improve this project, Maybe you need some standard.
+
+## PR branch name
+
+    `develop`
+
+## Improve this docs
+
+    Branch name: `doc/+ date`
+
+    Example: `doc/2018-1118-1130`
+
+## Bugfix
+
+    Branch name: `bugfix/+xx`
+
+    Example: `bugfix/export-static-resource`
