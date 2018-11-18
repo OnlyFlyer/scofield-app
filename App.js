@@ -14,6 +14,7 @@ import {
   View
 } from 'react-native'
 import { Provider } from 'react-redux'
+import { ActionTypes } from '@config'
 
 import SplashScreen from './src/view/splash_screen'
 
