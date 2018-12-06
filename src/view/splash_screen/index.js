@@ -15,7 +15,7 @@ class Splash extends Component {
     this.state = {}
     this.timer = setTimeout(() => {
       this.props.initEnd && this.props.initEnd()
-    }, 3000)
+    }, 5000)
   }
 
   _skip = () => {
