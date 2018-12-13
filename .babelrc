@@ -6,7 +6,8 @@
       "alias": {
           "@scofAssets": "./src/assets",
           "@components": "./src/components",
-          "@config": "./src/config"
+          "@config": "./src/config",
+          "@lib": "./src/lib"
       }
     }]
   ]
