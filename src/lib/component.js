@@ -4,7 +4,7 @@
  * @summary Base Component
  * @author Mark Scofiled
  * Created at     : 2018-12-13 16:29:35 
- * Last modified  : 2018-12-13 16:31:49
+ * Last modified  : 2018-12-13 18:06:24
  */
 
 import React, { Component } from 'react'
@@ -59,5 +59,7 @@ export default class ScofComponent extends Component {
    * @param {String} apiKey 
    * @param {Object} params 
    */
-  request (apiKey, params) {}
+  request (apiKey, params) {
+    return Request(apiKey, params)
+  }
 }

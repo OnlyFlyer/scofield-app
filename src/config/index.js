@@ -6,8 +6,12 @@
  */
 
 import ActionTypes from './action_types'
+import RequestPath from './request_path'
+import host from './host'
 
 // export config files
 export {
-  ActionTypes
+  ActionTypes,
+  RequestPath,
+  host
 }

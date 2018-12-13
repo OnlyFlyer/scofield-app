@@ -1,12 +1,13 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
+ * long description for the file
+ * @summary Entry Component
+ * @author Mark Scofiled
+ * Created at     : 2018-12-13 16:36:36 
+ * Last modified  : 2018-12-13 18:09:00
  */
 
-import React, { Component } from 'react'
+
+import React from 'react'
 import {
   Platform,
   StyleSheet,
@@ -14,7 +15,9 @@ import {
   View
 } from 'react-native'
 import { Provider } from 'react-redux'
-import { ActionTypes } from '@config'
+import { ActionTypes, RequestPath } from '@config'
+import { Component } from '@lib'
+import axios from 'axios'
 
 import SplashScreen from './src/view/splash_screen'
 
@@ -31,14 +34,28 @@ export default class App extends Component {
     super(props)
     this.state = {
       initComplete: false,
-      store: 'x'
+      store: {
+        subscribe: 'x'
+      }
     }
   }
 
   componentDidMount () {
+    this._testRequest()
     // this.setState({
     //   initComplete: true
     // })
+  }
+
+  _testRequest = async () => {
+    try {
+      const res = await this.request('haha', { haha: 'hehe', hehe: 'haha' })
+      console.log('===============test request=====================');
+      console.log(res);
+      console.log('====================================');
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   _initComplete = () => {

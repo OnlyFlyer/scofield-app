@@ -35,6 +35,13 @@ class Splash extends Component {
     console.log('isEmulator():', DeviceInfo.isEmulator())
     console.log('getUniqueID():', DeviceInfo.getUniqueID())
     console.log('getModel():', DeviceInfo.getModel())
+    DeviceInfo.getIPAddress()
+      .then(res => {
+        console.log('res:', res)
+      })
+      .catch(err => {
+        console.log('err:', err)
+      })
     console.log('====================================');
   }
 
