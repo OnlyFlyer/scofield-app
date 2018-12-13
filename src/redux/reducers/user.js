@@ -1,3 +1,11 @@
+/**
+ * Redux base config and will to do something
+ * @summary Reducer in User
+ * @author Mark Scofiled
+ * Created at     : 2018-12-13 14:00:13 
+ * Last modified  : 2018-12-13 16:07:21
+ */
+
 import { ActionTypes } from 'config'
 
 const initState = {
