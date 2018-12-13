@@ -1,3 +1,12 @@
+/**
+ * Extend React's Component, Add some
+ * customer feature, example: router: push, pop etc.
+ * @summary Base Component
+ * @author Mark Scofiled
+ * Created at     : 2018-12-13 16:29:35 
+ * Last modified  : 2018-12-13 16:31:49
+ */
+
 import React, { Component } from 'react'
 import Request from './request'
 
