@@ -14,7 +14,7 @@ DeviceInfo.getIPAddress()
     ipAddr = ip
   })
   .catch(err => {
-    ipAddr = 'none'
+    ipAddr = '127.0.0.1'
     console.log('==============get ipaddr failed======================');
     console.log(err);
     console.log('====================================');
