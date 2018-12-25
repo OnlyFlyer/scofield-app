@@ -3,10 +3,10 @@
  * @summary Reducer in User
  * @author Mark Scofiled
  * Created at     : 2018-12-13 14:00:13 
- * Last modified  : 2018-12-13 16:07:21
+ * Last modified  : 2018-12-25 16:54:22
  */
 
-import { ActionTypes } from 'config'
+import { ActionTypes } from '@config'
 
 const initState = {
   firstName: '', // 名字
