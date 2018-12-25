@@ -1,4 +1,4 @@
-import { ActionTypes } from 'config'
+import { ActionTypes } from '@config'
 
 export default {
   logout: () => (dispatch) => {
