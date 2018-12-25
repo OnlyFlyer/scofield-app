@@ -3,7 +3,7 @@
  * @summary Entry Component
  * @author Mark Scofiled
  * Created at     : 2018-12-13 16:36:36 
- * Last modified  : 2018-12-13 18:09:00
+ * Last modified  : 2018-12-25 16:55:15
  */
 
 
@@ -17,9 +17,10 @@ import {
 import { Provider } from 'react-redux'
 import { ActionTypes, RequestPath } from '@config'
 import { Component } from '@lib'
-import axios from 'axios'
 
 import SplashScreen from './src/view/splash_screen'
+import configureStore from './src/redux/store'
+import Home from './src/view/home'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -34,10 +35,13 @@ export default class App extends Component {
     super(props)
     this.state = {
       initComplete: false,
-      store: {
-        subscribe: 'x'
-      }
+      hasLoadInfo: false,
+      store: configureStore(this._changeLoadInfo)
     }
+  }
+
+  _changeLoadInfo = () => {
+    this.setState({hasLoadInfo: true})
   }
 
   componentDidMount () {
@@ -64,11 +68,12 @@ export default class App extends Component {
     })
   }
   render() {
-    const { initComplete = false, store } = this.state
+    const { initComplete = false, store, hasLoadInfo = true } = this.state
     if (!initComplete) {
       return (
         <SplashScreen
           showBtn
+          // showBtn={hasLoadInfo}
           initEnd={this._initComplete}
         />
       )
@@ -80,6 +85,7 @@ export default class App extends Component {
           <Text style={styles.instructions}>To get started, edit App.js</Text>
           <Text style={styles.instructions}>{instructions}</Text>
         </View>
+        {/* <Home /> */}
       </Provider>
     );
   }
