@@ -3,18 +3,19 @@
  * @summary Entry Component
  * @author Mark Scofiled
  * Created at     : 2018-12-13 16:36:36 
- * Last modified  : 2018-12-25 17:58:18
+ * Last modified  : 2018-12-27 11:45:43
  */
 
 
 import React from 'react'
-import { Provider } from 'react-redux'
+import { Provider, connect } from 'react-redux'
 
 import { ActionTypes, RequestPath } from '@config'
 import { Component } from '@lib'
+import { Actions, Reducers, Store } from '@redux'
 
 import SplashScreen from './src/view/splash_screen'
-import configureStore from './src/redux/store'
+import configureStore from '@redux/store'
 import EntryComponent from './src/view'
 
 // type Props = {}

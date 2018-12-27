@@ -1,5 +1,5 @@
-import User from './user'
+import UserAction from './user'
 
-export {
-  User
+export default {
+  UserAction
 }
