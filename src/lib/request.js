@@ -15,11 +15,10 @@ DeviceInfo.getIPAddress()
   })
   .catch(err => {
     ipAddr = '127.0.0.1'
-    console.log('==============get ipaddr failed======================');
-    console.log(err);
-    console.log('====================================');
+    console.log('==============get ipaddr failed======================')
+    console.log(err)
+    console.log('====================================')
   })
-
 
 // 先不管登入登出接口
 // const login = RequestPath.login

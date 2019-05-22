@@ -1,8 +1,8 @@
 /**
  * @summary host config, include getHost methods
  * @author Mark Scofiled
- * Created at     : 2018-12-13 17:15:29 
- * Last modified  : 2018-12-13 17:23:28
+ * Created at     : 2018-12-13 17:15:29
+ * Last modified  : 2019-05-22 11:30:11
  */
 
 export default {
