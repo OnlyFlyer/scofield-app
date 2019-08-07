@@ -109,8 +109,8 @@ export default createStackNavigator({
     }
   }
 }, {
-  // initialRouteName: 'Home',
-  initialRouteName: 'EntryComponent'
+  initialRouteName: 'Home'
+  // initialRouteName: 'EntryComponent'
 })
 
 // export default connect(mapStateToProps, mapDispatchToProps)(EntryComponent)

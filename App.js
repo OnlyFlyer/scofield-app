@@ -2,10 +2,9 @@
  * long description for the file
  * @summary Entry Component
  * @author Mark Scofiled
- * Created at     : 2018-12-13 16:36:36 
- * Last modified  : 2018-12-27 11:45:43
+ * Created at     : 2018-12-13 16:36:36
+ * Last modified  : 2019-05-22 11:46:02
  */
-
 
 import React from 'react'
 import { Provider, connect } from 'react-redux'
@@ -20,30 +19,29 @@ import EntryComponent from './src/view'
 
 // type Props = {}
 export default class App extends Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
       initComplete: false,
       hasLoadInfo: false,
       store: configureStore(this._changeLoadInfo)
-    }
+    };
   }
 
   _changeLoadInfo = () => {
-    this.setState({hasLoadInfo: true})
+    this.setState({ hasLoadInfo: true })
   }
 
-  componentDidMount () {
-  }
+  componentDidMount () {}
 
   _initComplete = () => {
     this.setState({
       initComplete: true
-    })
+    });
   }
 
   render() {
-    const { initComplete = false, store } = this.state
+    const { initComplete = false, store } = this.state;
     if (!initComplete) {
       return (
         <SplashScreen
@@ -57,6 +55,6 @@ export default class App extends Component {
       <Provider store={store}>
         <EntryComponent />
       </Provider>
-    );
+    )
   }
 }
