@@ -12,8 +12,10 @@
 
 // components export files
 
-import Tip from './tip'
+// import Tip from './tip'
 
-export {
-  Tip
-}
+// export {
+//   Tip
+// }
+
+export { default as Tip } from './tip'

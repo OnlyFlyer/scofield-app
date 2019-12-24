@@ -15,6 +15,7 @@ export default class Tip extends Component {
   }
 
   render () {
+    console.log('props:', this.props)
     return (
       <View>
         <Text>This is a Tips !</Text>
